@@ -70,6 +70,7 @@ public class MainActivity extends BridgeActivity {
                 cfg.put("high_threshold", prefs.getInt("high_threshold", 180));
                 cfg.put("urgent_high", prefs.getInt("urgent_high", 250));
                 cfg.put("stale_minutes", prefs.getInt("stale_minutes", 5));
+                cfg.put("legal_accepted", prefs.getBoolean("legal_accepted", false));
 
                 JSONObject res = new JSONObject();
                 res.put("ok", true);
@@ -102,11 +103,14 @@ public class MainActivity extends BridgeActivity {
                 if (in.has("high_threshold")) ed.putInt("high_threshold", in.optInt("high_threshold", 180));
                 if (in.has("urgent_high")) ed.putInt("urgent_high", in.optInt("urgent_high", 250));
                 if (in.has("stale_minutes")) ed.putInt("stale_minutes", in.optInt("stale_minutes", 5));
+                if (in.has("legal_accepted")) ed.putBoolean("legal_accepted", in.optBoolean("legal_accepted", false));
 
-                ed.remove("cached_token");
-                ed.remove("cached_expires");
-                ed.remove("cached_account_hash");
-                ed.remove("cached_host");
+                if (in.has("llu_email") || in.has("llu_password") || in.has("llu_region") || in.has("source")) {
+                    ed.remove("cached_token");
+                    ed.remove("cached_expires");
+                    ed.remove("cached_account_hash");
+                    ed.remove("cached_host");
+                }
                 ed.apply();
 
                 return getConfig();

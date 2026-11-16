@@ -880,7 +880,7 @@
     <div class="modal-card">
         <div class="modal-header">
             <h2>⚖️ Aviso Legal y Exención de Responsabilidad</h2>
-            <button class="btn-close" onclick="closeModal('legal-modal')">✕</button>
+            <button class="btn-close" id="btn-close-legal" onclick="closeModal('legal-modal')">✕</button>
         </div>
         <div class="info-box">
             <h3>1. Propósito Exclusivamente Informativo</h3>
@@ -894,7 +894,7 @@
             <h3>3. Exención de Responsabilidades de Uso</h3>
             <p>La transmisión de datos depende de conexiones a internet, servidores de terceros y sincronización Bluetooth/NFC del teléfono emisor, pudiendo presentar retrasos, interrupciones o inexactitudes. El desarrollador y los colaboradores de MUG quedan <strong>totalmente eximidos de cualquier responsabilidad civil, médica, directa o indirecta</strong> derivada del uso, mal funcionamiento, falta de conexión o interpretación de los datos exhibidos en esta aplicación.</p>
         </div>
-        <button class="btn-primary" onclick="closeModal('legal-modal')">Entendido y Acepto</button>
+        <button class="btn-primary" id="btn-accept-legal" onclick="acceptLegalDisclaimer()">✅ He leído y acepto las condiciones de uso</button>
     </div>
 </div>
 
@@ -1465,6 +1465,34 @@
         xhr.send(JSON.stringify(payload));
     }
 
+    function acceptLegalDisclaimer() {
+        try { localStorage.setItem('mug_legal_accepted', '1'); } catch (e) {}
+        if (appState.config) appState.config.legal_accepted = true;
+        var closeBtn = document.getElementById('btn-close-legal');
+        if (closeBtn) closeBtn.style.display = 'inline-block';
+        closeModal('legal-modal');
+
+        if (window.MugNative && typeof window.MugNative.saveConfig === 'function') {
+            try { window.MugNative.saveConfig(JSON.stringify({ legal_accepted: true })); } catch (e) {}
+        }
+
+        // Si aún no tiene cuenta configurada, abrir directamente Conectar Cuenta
+        if (appState.source === 'librelinkup' && (!appState.config || !appState.config.llu_email)) {
+            openConnectFromMenu();
+        }
+    }
+
+    function checkFirstLaunchLegal(c) {
+        var acceptedLocal = false;
+        try { acceptedLocal = (localStorage.getItem('mug_legal_accepted') === '1'); } catch (e) {}
+        var acceptedCfg = (c && c.legal_accepted === true);
+        if (!acceptedLocal && !acceptedCfg) {
+            var closeBtn = document.getElementById('btn-close-legal');
+            if (closeBtn) closeBtn.style.display = 'none';
+            openModal('legal-modal');
+        }
+    }
+
     function applyLoadedConfig(rawText) {
         try {
             var res = JSON.parse(rawText);
@@ -1485,11 +1513,14 @@
                 document.getElementById('cfg-stale-minutes').value = c.stale_minutes || 5;
                 updateModalSourceFields();
                 document.getElementById('bottom-demo-bar').style.display = (appState.source === 'demo') ? 'flex' : 'none';
+                checkFirstLaunchLegal(c);
                 fetchGlucoseData();
             } else {
+                checkFirstLaunchLegal(null);
                 setNoDataState('Sin Información de Sensor');
             }
         } catch (e) {
+            checkFirstLaunchLegal(null);
             setNoDataState('Sin Información de Sensor');
         }
     }
