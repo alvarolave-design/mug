@@ -918,8 +918,8 @@
         <div class="info-box">
             <h3>📧 Contacto y Soporte por Correo</h3>
             <p>¿Tienes sugerencias, consultas o deseas reportar algún detalle de la aplicación?</p>
-            <p style="margin-top:6px; font-size:14px; color:#34d399; font-weight:700;">alvarolave@gmail.com</p>
-            <button class="btn-secondary" onclick="openExternal('mailto:alvarolave@gmail.com?subject=Soporte%20MUG%20Monitor%20v1.1.0')">
+            <p style="margin-top:6px; font-size:14px; color:#34d399; font-weight:700;">codigo.creativo.ao@gmail.com</p>
+            <button class="btn-secondary" onclick="openExternal('mailto:codigo.creativo.ao@gmail.com?subject=Soporte%20MUG%20Monitor%20v1.1.0')">
                 ✉️ Enviar Correo de Contacto
             </button>
         </div>

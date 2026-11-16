@@ -42,5 +42,11 @@ Puedes descargar el instalador directo para Android haciendo clic aquí:
 
 ---
 
+## 📧 Contacto y Soporte
+- **Desarrollador:** Alvaro Olave · Código Creativo
+- **Correo electrónico:** [codigo.creativo.ao@gmail.com](mailto:codigo.creativo.ao@gmail.com)
+
+---
+
 ## ⚖️ Aviso Legal
 **MUG (Monitor Universal de Glucosa)** es una herramienta secundaria de visualización con fines exclusivamente informativos. **No es un dispositivo médico certificado** ni reemplaza al lector o aplicación oficial del fabricante del sensor. No se deben tomar decisiones médicas ni de dosificación de insulina basándose en esta aplicación.
