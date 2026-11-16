@@ -1,0 +1,11 @@
+node_modules/
+builds/.tools/
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/local.properties
+config.json
+token_cache.json
+llu_debug.json
+.DS_Store

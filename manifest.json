@@ -1,0 +1,18 @@
+{
+  "name": "MUG - Monitor Universal de Glucosa",
+  "short_name": "MUG Monitor",
+  "description": "Monitor de glucosa tipo SugarDash/SugarPixel para reutilizar tablets y celulares antiguos con FreeStyle Libre y Nightscout.",
+  "start_url": "./index.php",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#070a12",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
