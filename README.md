@@ -44,6 +44,7 @@ Puedes descargar el instalador directo para Android haciendo clic aquí:
 
 ## 📧 Contacto y Soporte
 - **Desarrollador:** Alvaro Olave · Código Creativo
+- **WhatsApp de Soporte:** [+56 9 3223 2764](https://wa.me/56932232764?text=Hola%2C%20vi%20la%20app%20MUG%20Monitor%20y%20tengo%20una%20consulta)
 - **Correo electrónico:** [codigo.creativo.ao@gmail.com](mailto:codigo.creativo.ao@gmail.com)
 
 ---

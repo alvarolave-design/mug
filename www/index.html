@@ -726,7 +726,7 @@
                     <span>ℹ️</span>
                     <div>
                         Versión y Contacto
-                        <span class="menu-item-sub">Información de la APK y soporte por correo</span>
+                        <span class="menu-item-sub">Información de la APK, WhatsApp y correo de soporte</span>
                     </div>
                 </div>
                 <span>›</span>
@@ -915,10 +915,20 @@
             <p><strong>Repositorio Oficial:</strong> github.com/alvarolave-design/mug</p>
             <p><strong>Compatibilidad:</strong> Tablets y teléfonos Android (desde Android 5.0 Lollipop en adelante) y navegadores web.</p>
         </div>
+        <div class="info-box" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+            <div style="flex:1;">
+                <h3>💬 Soporte por WhatsApp</h3>
+                <p>¿Consultas o ayuda para instalarla?</p>
+                <p style="margin-top:4px; font-size:15px; color:#34d399; font-weight:800;">+56 9 3223 2764</p>
+                <button class="btn-secondary" style="border-color:#10b981; color:#6ee7b7;" onclick="openExternal('https://wa.me/56932232764?text=Hola%2C%20vi%20la%20app%20MUG%20Monitor%20y%20tengo%20una%20consulta')">
+                    💬 Abrir WhatsApp
+                </button>
+            </div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&margin=4&data=https%3A%2F%2Fwa.me%2F56932232764%3Ftext%3DHola%252C%2520vi%2520la%2520app%2520MUG%2520Monitor" alt="QR WhatsApp" style="width:86px; height:86px; border-radius:8px; background:#fff; flex-shrink:0;" onerror="this.style.display='none'">
+        </div>
         <div class="info-box">
-            <h3>📧 Contacto y Soporte por Correo</h3>
-            <p>¿Tienes sugerencias, consultas o deseas reportar algún detalle de la aplicación?</p>
-            <p style="margin-top:6px; font-size:14px; color:#34d399; font-weight:700;">codigo.creativo.ao@gmail.com</p>
+            <h3>📧 Contacto por Correo</h3>
+            <p style="margin-top:4px; font-size:14px; color:#34d399; font-weight:700;">codigo.creativo.ao@gmail.com</p>
             <button class="btn-secondary" onclick="openExternal('mailto:codigo.creativo.ao@gmail.com?subject=Soporte%20MUG%20Monitor%20v1.1.0')">
                 ✉️ Enviar Correo de Contacto
             </button>
