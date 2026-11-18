@@ -38,7 +38,7 @@ Puedes descargar el instalador directo para Android haciendo clic aquí:
 
 - 💜 **Pagar con MACH:** [https://app.soymach.com/rF2V/fnfvmt1m](https://app.soymach.com/rF2V/fnfvmt1m)
 - 🤝 **Mercado Pago:** [https://link.mercadopago.cl/codigocreativo](https://link.mercadopago.cl/codigocreativo)
-- 💙 **PayPal.Me:** [https://www.paypal.com/paypalme/codigoCreativo/10](https://www.paypal.com/paypalme/codigoCreativo/10)
+- 💙 **PayPal.Me:** [https://www.paypal.com/paypalme/codigoCreativo](https://www.paypal.com/paypalme/codigoCreativo)
 
 ---
 

@@ -977,11 +977,11 @@
             <div style="flex:1;">
                 <span class="donate-badge" style="background:rgba(59, 130, 246, 0.25); color:#93c5fd;">💙 PayPal</span>
                 <p style="font-size:13px;">Aporte internacional mediante <strong>PayPal.Me</strong>:</p>
-                <button class="btn-secondary" style="border-color:#3b82f6; color:#bfdbfe;" onclick="openExternal('https://www.paypal.com/paypalme/codigoCreativo/10')">
+                <button class="btn-secondary" style="border-color:#3b82f6; color:#bfdbfe;" onclick="openExternal('https://www.paypal.com/paypalme/codigoCreativo')">
                     🔗 Abrir PayPal.Me
                 </button>
             </div>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&margin=4&data=https%3A%2F%2Fwww.paypal.com%2Fpaypalme%2FcodigoCreativo%2F10" alt="QR PayPal" style="width:86px; height:86px; border-radius:8px; background:#fff; flex-shrink:0;" onerror="this.style.display='none'">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&margin=4&data=https%3A%2F%2Fwww.paypal.com%2Fpaypalme%2FcodigoCreativo" alt="QR PayPal" style="width:86px; height:86px; border-radius:8px; background:#fff; flex-shrink:0;" onerror="this.style.display='none'">
         </div>
 
         <button class="btn-primary" onclick="closeModal('donate-modal')">Cerrar</button>
